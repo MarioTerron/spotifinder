@@ -259,6 +259,7 @@ footer p {
         float: none;
         margin: 0 auto;
         height: 100px;
+        font-size: 2rem;
         line-height: 100px;
         text-align: center;
     }
