@@ -16,7 +16,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    clear: both;
+    font-family: "Montserrat", sans-serif;
     font-weight: normal;
 }
 
@@ -66,10 +66,14 @@ a img {
 body {
     background-color: #5cb85c;
     color: #505050;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-weight: 300;
     font-size: 16px;
     line-height: 1.8;
+}
+
+.container {
+    width: 80%
 }
 
 
@@ -103,17 +107,6 @@ a:hover {
     padding-top: 150px;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0 30px;
-}
-
-.flex {
-    display: flex;
-    align-items: center;
-}
-
 section {
     padding: 60px 0;
 }
@@ -123,20 +116,9 @@ section h2 {
     margin-bottom: 10px;
 }
 
-
 section p {
     margin-bottom: 30px;
 }
-
-section p:last-child {
-    margin-bottom: 0;
-}
-
-section.color {
-    background-color: #5cb85c;
-    color: white;
-}
-
 
 /* =Info Bar
 -------------------------------------------------------------- */
@@ -177,64 +159,28 @@ header {
     left: 0;
     z-index: 999;
     background-color: #5cb85c;
-    -webkit-transition: height 0.3s;
-    -moz-transition: height 0.3s;
-    -ms-transition: height 0.3s;
-    -o-transition: height 0.3s;
     transition: height 0.3s;
+}
+
+header img {
+    margin-right: 10px;   
 }
 
 header #logo {
     display: inline-block;
-    height: 150px;
-    line-height: 150px;
-    float: left;
-    font-family: "Oswald", sans-serif;
+    line-height: 90px;
     font-size: 3.5rem;
     color: #424242;
-    font-weight: 900;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
     transition: all 0.3s;
+    margin: 0;
 }
 
-header nav {
-    display: inline-block;
-    float: right;
-}
-
-header nav a {
-    line-height: 150px;
-    margin-left: 20px;
-    color: #9fdbfc;
-    font-weight: 700;
-    font-size: 18px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-header nav a:hover {
-    color: white;
-}
-
-header.smaller {
-    height: 75px;
-}
-
-header.smaller h1#logo {
-    width: 150px;
-    height: 75px;
-    line-height: 75px;
-    font-size: 30px;
-}
-
-header.smaller nav a {
-    line-height: 75px;
+header .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 
@@ -251,64 +197,23 @@ footer p {
 /* =Media Queries
 -------------------------------------------------------------- */
 
-@media all and (max-width: 770px) {
-    /* =Header
-  -------------------------------------------------------------- */
-    header h1#logo {
-        display: block;
-        float: none;
-        margin: 0 auto;
-        height: 100px;
-        font-size: 2.5rem;
-        line-height: 100px;
-        text-align: center;
-    }
-    header nav {
-        display: block;
-        float: none;
-        height: 50px;
-        text-align: center;
-        margin: 0 auto;
-    }
-    header nav a {
-        line-height: 50px;
-        margin: 0 10px;
-    }
-    header.smaller {
-        height: 75px;
-    }
-    header.smaller h1#logo {
-        height: 40px;
-        line-height: 40px;
-        font-size: 30px;
-    }
-    header.smaller nav {
-        height: 35px;
-    }
-    header.smaller nav a {
-        line-height: 35px;
-    }
-    form .btn {
-        margin-top: 10px;
-        width: 100%;
+@media all and (max-width: 540px) {
+    footer p {
+        font-size: 14px;
     }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 770px) {
+    
+    header .container {
+        justify-content: center
+    }
     .container {
+        width: auto;
+    }
+
+    form .btn {
+        margin-top: 10px;
         width: 100%;
-    }
-    #info-bar a {
-        display: block;
-    }
-    #info-bar span.all-tutorials, #info-bar span.back-to-tutorial {
-        width: 100%;
-    }
-    #info-bar span.all-tutorials, #info-bar span.back-to-tutorial {
-        float: none;
-        text-align: center;
-    }
-    #info-bar span.all-tutorials {
-        border-bottom: solid 1px #4cae4c;
     }
 }
