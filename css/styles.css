@@ -73,7 +73,7 @@ body {
 }
 
 .container {
-    width: 80%
+    width: 60%;
 }
 
 
@@ -125,10 +125,11 @@ section p {
 
 #info-bar {
     background-color: #5cb85c;
+    color: #fff
 }
 
 #info-bar a {
-    color: #505050;
+    color: #fff;
     margin: 0;
     padding: 10px 0;
     font-weight: 600;
@@ -170,7 +171,7 @@ header #logo {
     display: inline-block;
     line-height: 90px;
     font-size: 3.5rem;
-    color: #424242;
+    color: #fff;
     font-weight: 600;
     text-transform: uppercase;
     transition: all 0.3s;
@@ -197,11 +198,11 @@ footer p {
 /* =Media Queries
 -------------------------------------------------------------- */
 
-@media all and (max-width: 540px) {
-    footer p {
-        font-size: 14px;
+@media all and (max-width: 920px) {
+    
+    .container {
+        width: 80%;
     }
-}
 
 @media all and (max-width: 770px) {
     
@@ -217,3 +218,10 @@ footer p {
         width: 100%;
     }
 }
+
+@media all and (max-width: 540px) {
+    footer p {
+        font-size: 14px;
+    }
+}
+
