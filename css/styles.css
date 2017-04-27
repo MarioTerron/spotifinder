@@ -1,6 +1,4 @@
-//
-
-/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+    /* Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
@@ -50,10 +48,6 @@ a img {
 }
 
 
-/* =Scss Variables
--------------------------------------------------------------- */
-
-
 /* =Global
 -------------------------------------------------------------- */
 
@@ -76,8 +70,10 @@ body {
     width: 60%;
 }
 
-
-/* Headings */
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1;
@@ -93,62 +89,21 @@ a:hover {
     color: #4cae4c;
 }
 
-
-/* =Template
--------------------------------------------------------------- */
-
-#wrapper {
+li.list-group-item:only-child {
+    display: block;
     width: 100%;
-    margin: 0 auto;
-}
-
-#main {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
     background-color: #fff;
-    padding-top: 150px;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-section {
-    padding: 60px 0;
-}
-
-section h2 {
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-section p {
-    margin-bottom: 30px;
-}
-
-/* =Info Bar
--------------------------------------------------------------- */
-
-#info-bar {
-    background-color: #5cb85c;
-    color: #fff
-}
-
-#info-bar a {
-    color: #fff;
-    margin: 0;
-    padding: 10px 0;
-    font-weight: 600;
-    text-decoration: none;
-    position: relative;
-    cursor: pointer
-}
-
-#info-bar a:hover {
-    color: #444444;
-    top: -4px;
-}
-
-.fa-heart {
-    color: #ce4844;
-}
-
-
-/* =Header
+/* Header
 -------------------------------------------------------------- */
 
 header {
@@ -164,7 +119,7 @@ header {
 }
 
 header img {
-    margin-right: 10px;   
+    margin-right: 10px;
 }
 
 header #logo {
@@ -184,9 +139,35 @@ header .container {
     height: 100%;
 }
 
-
-/* =Footer
+/* Section
 -------------------------------------------------------------- */
+
+#main {
+    background-color: #fff;
+    padding-top: 150px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    font-weight: 400;
+    margin: 20px 0 10px;
+}
+
+section p {
+    margin-bottom: 30px;
+}
+
+
+/* Footer
+-------------------------------------------------------------- */
+
+footer {
+    background-color: #5cb85c;
+    color: #fff
+}
 
 footer p {
     padding: 20px 0;
@@ -194,25 +175,41 @@ footer p {
     font-weight: 400;
 }
 
+footer a {
+    color: #fff;
+    margin: 0;
+    padding: 10px 0;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer
+}
 
-/* =Media Queries
+footer a:hover {
+    color: #444444;
+    top: -4px;
+}
+
+footer .fa-heart {
+    color: #ce4844;
+}
+
+
+/* Media Queries
 -------------------------------------------------------------- */
 
 @media all and (max-width: 920px) {
-    
     .container {
         width: 80%;
     }
-
-@media all and (max-width: 770px) {
     
+@media all and (max-width: 770px) {
     header .container {
         justify-content: center
     }
     .container {
         width: auto;
     }
-
     form .btn {
         margin-top: 10px;
         width: 100%;
@@ -224,4 +221,3 @@ footer p {
         font-size: 14px;
     }
 }
-

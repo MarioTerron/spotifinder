@@ -24,7 +24,7 @@ $('#artists-selection').on('change', function(e) {
         url: urlAlbums,
         success: function(data) {
             var albumsFound = data.items
-            var optionsAlbums = '<option selected disabled>Select an a track</option>'
+            var optionsAlbums = '<option selected disabled>Select an album</option>'
             albumsFound.forEach(function(albumData) {
                 optionsAlbums += '<option value="' + albumData.id + '">' + albumData.name + '</option>'
             })
